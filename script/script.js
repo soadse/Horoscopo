@@ -1,5 +1,4 @@
 var telaLogin = document.querySelector('#containerLogin')
-var telaEspera = window.document.querySelector('#containerEspera')
 var telaSignos = document.querySelector('#containerSignos')
 var erro = document.querySelector('#erro')
 
@@ -317,11 +316,13 @@ function pega(){
         erro.innerHTML = 'Campo <strong>mês</strong> vazio'
     } else if(mes < 0 || mes > 12){
         erro.innerText = 'Digite um mês entre 01 e 12'
-    } else {
+    } 
+    // RESULTADO
+    else {
         telaLogin.style.display = 'none'
-        telaEspera.style.display = 'block'
         telaSignos.style.display = 'block'
     }
+
 
 
     
