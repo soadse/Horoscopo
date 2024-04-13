@@ -1,10 +1,32 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+.courgette-regular {
+    font-family: "Courgette", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
 
+:root {
+    --font01: "Courgette", cursive;
+}
+
+
+  
+  
 
 #containerSignos {
     width: 100vw;
     height: 100vh;
+    animation: graca forwards 1s;
+}
+@keyframes graca {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
 }
 #containerSignos > .signos{
     width: 100vw;
@@ -46,6 +68,9 @@
     flex-direction: column;
 }
 #containerSignos > .signos > .corpo > .resultado {
+    font-family: "Courgette", cursive;
+    font-weight: normal;
+    color: rgb(68, 0, 68);
     margin-top: 10px;
     font-size: 3em;
 }
@@ -62,6 +87,8 @@
     margin-bottom: 20px ;
 }
 #containerSignos > .signos > .corpo > .texto > h1 {
+    font-family: var(--font01);
+    font-weight: bold;
     color: rgb(75, 6, 75);
     text-align: center;
     margin-top: 30px;
@@ -109,22 +136,40 @@
 }
 #containerSignos > .signos > .corpo > .texto > .sobre > .sobre1 > div > p {
     margin-top: 10px;
-    animation: cor infinite 2s;
+    animation: cor infinite 1s;
 }
 @keyframes cor {
     0% {
-        color: palevioletred;
+        text-decoration: underline purple;
     }
     50% {
-        color: black;
+        text-decoration: none;
     }
     100% {
-        color: palevioletred;
+        text-decoration: underline purple;
     }
 }
 #containerSignos > .signos > .corpo > .texto > .sobre > .show > p {
+    background-color: rgba(128, 0, 128, 0.432);
+    border-radius: 0px 20px 0px 20px;
+    padding: 10px;
     text-indent: 2em;
     font-size: 20px;
     line-height: 30px;
     text-align: justify;
+}
+#containerSignos > .signos > .corpo > a {
+    font-size: 2em;
+    background-color: purple;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+#containerSignos > .signos > .corpo > a:hover {
+    background-color: rgb(54, 0, 54);
 }
