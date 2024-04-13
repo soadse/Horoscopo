@@ -310,6 +310,8 @@ function pega(){
         erro.innerHTML = 'Campo <strong>dia</strong> vazio'
     } else if(dia < 0 || dia > 31){
         erro.innerText = 'Digite um dia entre 01 e 31'
+    } else if(dia > 29 && mes == 2){
+        erro.innerText = `Dia ${dia} de fevereiro não existe`
     }
     // CAMPO MÊS
     else if(mes == ''){
