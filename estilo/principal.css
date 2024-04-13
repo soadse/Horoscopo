@@ -1,17 +1,14 @@
 @charset "UTF-8";
 
-body {
-    scrollbar-width: none;
-    background-attachment: fixed;
-}
+
 
 #containerSignos {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 #containerSignos > .signos{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 
 /* Campo da cabeça na tela principla */
