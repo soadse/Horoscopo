@@ -331,135 +331,135 @@ function pega(){
     // CAMPO DOS SIGNOS
 
     // SIGNO DE ARIES
-    if(dia >= 21 || dia <= 31 && mes == 3){
+    if(dia >= 21 && mes == 3){
         aries.style.display = 'block'
         nome1.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data1.innerHTML = `${dia}/${mes}`
-    } else if(dia < 21 && mes == 4){
+    } else if(dia <= 19 && mes == 4){
         aries.style.display = 'block'
         nome1.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data1.innerHTML = `${dia}/${mes}`
     }
 
     // SIGNO DE TOURO
-    if(dia >= 20 || dia <= 31 && mes == 4){
+    if(dia >= 20 && mes == 4){
         touro.style.display = 'block'
         nome2.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data2.innerHTML = `${dia}/${mes}`
-    } else if(dia < 21 && mes == 5){
+    } else if(dia <= 20 && mes == 5){
         touro.style.display = 'block'
         nome2.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data2.innerHTML = `${dia}/${mes}`
     }
 
     // SIGNO DE GÊMEOS
-    if(dia >= 21 || dia <= 31 && mes == 5){
+    if(dia >= 21 && mes == 5){
         gemeos.style.display = 'block'
         nome3.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data3.innerHTML = `${dia}/${mes}`
-    } else if(dia < 21 && mes == 6){
+    } else if(dia <= 21 && mes == 6){
         gemeos.style.display = 'block'
         nome3.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data3.innerHTML = `${dia}/${mes}`
     }
 
     // SIGNO DE CÂNCER  
-    if(dia >= 22 || dia <= 31 && mes == 6){
+    if(dia >= 22 && mes == 6){
         cancer.style.display = 'block'
         nome4.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data4.innerHTML = `${dia}/${mes}`
-    } else if(dia < 23 && mes == 7){
+    } else if(dia <= 22 && mes == 7){
         cancer.style.display = 'block'
         nome4.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data4.innerHTML = `${dia}/${mes}`
     }
 
     // SIGNO DE LEÃO
-    if(dia >= 23 || dia <= 31 && mes == 7){
+    if(dia >= 23 && mes == 7){
         leao.style.display = 'block'
         nome5.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data5.innerHTML = `${dia}/${mes}`
-    } else if(dia < 23 && mes== 8){
+    } else if(dia <= 22 && mes== 8){
         leao.style.display = 'block'
         nome5.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data5.innerHTML = `${dia}/${mes}`
     }
     
     // SIGNO DE VIRGEM
-    if(dia >= 23 || dia <= 31 && mes == 8){
+    if(dia >= 23 && mes == 8){
         virgem.style.display = 'block'
         nome6.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data6.innerHTML = `${dia}/${mes}`
-    } else if(dia < 23 && mes == 9){
+    } else if(dia <= 22 && mes == 9){
         virgem.style.display = 'block'
         nome6.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data6.innerHTML = `${dia}/${mes}`
     }
 
     // SIGNO DE LIBRA
-    if(dia >= 23 || dia <= 31 && mes == 9){
+    if(dia >= 23 && mes == 9){
         libra.style.display = 'block'
         nome7.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data7.innerHTML = `${dia}/${mes}`
-    } else if(dia < 23 && mes == 10){
+    } else if(dia <= 22 && mes == 10){
         libra.style.display = 'block'
         nome7.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data7.innerHTML = `${dia}/${mes}`
     }
 
     // SIGNO DE ESCORPIÃO
-    if(dia >= 23 || dia <= 31 && mes == 10){
+    if(dia >= 23 && mes == 10){
         escorpiao.style.display = 'block'
         nome8.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data8.innerHTML = `${dia}/${mes}`
-    } else if(dia < 22 && mes == 11){
+    } else if(dia <= 21 && mes == 11){
         escorpiao.style.display = 'block'
         nome8.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data8.innerHTML = `${dia}/${mes}`
     }
 
     // SIGNO DE SAGITÁRIO
-    if(dia >= 22 || dia <= 31 && mes == 11){
+    if(dia >= 22 && mes == 11){
         sagitario.style.display = 'block'
         nome9.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data9.innerHTML = `${dia}/${mes}`
-    } else if(dia < 22 && mes == 12){
+    } else if(dia <= 21 && mes == 12){
         sagitario.style.display = 'block'
         nome9.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data9.innerHTML = `${dia}/${mes}`
     }
 
     // SIGNO DE CAPRICÓRNIO
-    if(dia >= 22 || dia <= 31 && mes == 12){
+    if(dia >= 22 && mes == 12){
         capricornio.style.display = 'block'
         nome10.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data10.innerHTML = `${dia}/${mes}`
-    } else if(dia < 21 && mes == 1){
+    } else if(dia <= 19 && mes == 1){
         capricornio.style.display = 'block'
         nome10.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data10.innerHTML = `${dia}/${mes}`
     }
 
     // SIGNO DE AQUÁRIO
-    if(dia >= 20 || dia <= 31 && mes == 1){
+    if(dia >= 20 && mes == 1){
         aquario.style.display = 'block'
         nome11.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data11.innerHTML = `${dia}/${mes}`
-    } else if(dia < 19 && mes == 2){
+    } else if(dia <= 18 && mes == 2){
         aquario.style.display = 'block'
         nome11.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data11.innerHTML = `${dia}/${mes}`
     }
 
     // SIGNO DE PEIXES
-    if(dia >= 19 || dia < 29 && mes == 2){
+    if(dia >= 19 && mes == 2){
         peixes.style.display = 'block'
         nome12.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data12.innerHTML = `${dia}/${mes}`
     } else if(dia > 29 && mes == 2){
         peixes.style.display = 'none'
     }
-    else if(dia < 21 && mes == 3){
+    else if(dia <= 20 && mes == 3){
         peixes.style.display = 'block'
         nome12.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data12.innerHTML = `${dia}/${mes}`
