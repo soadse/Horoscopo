@@ -456,7 +456,10 @@ function pega(){
         peixes.style.display = 'block'
         nome12.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data12.innerHTML = `${dia}/${mes}`
-    } else if(dia < 21 && mes == 3){
+    } else if(dia > 29 && mes == 2){
+        peixes.style.display = 'none'
+    }
+    else if(dia < 21 && mes == 3){
         peixes.style.display = 'block'
         nome12.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data12.innerHTML = `${dia}/${mes}`
