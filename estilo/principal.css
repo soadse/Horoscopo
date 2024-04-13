@@ -15,8 +15,8 @@
     }
 }
 #containerSignos > .signos {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100%vh;
 }
 
 /* Campo da cabeça na tela principla */
