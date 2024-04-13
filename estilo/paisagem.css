@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+body {
+    background-color: plum;
+}
+#containerLogin {
+    height: 100vh;
+    transition: none;
+}
+#containerSignos > .signos > .cabeca {
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.623);
+}
+#containerSignos > .signos > .corpo {
+    margin: auto;
+    max-width: 1000px;
+    background-color: white;
+}
+#containerSignos > .signos > .corpo > a {
+    width: 100vw;
+}
