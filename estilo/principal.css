@@ -8,7 +8,7 @@
 @keyframes trans {
     0% {
         transform: matrix(10, 0, 0, 10, 0, 0);
-        opacity: 0%;
+        opacity: 0%; 
     }
     100% {
         opacity: 100%;
