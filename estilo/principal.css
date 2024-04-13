@@ -132,15 +132,16 @@
     line-height: 30px;
     text-align: justify;
 }
-#containerSignos > .signos > .corpo > a {
+#containerSignos > .signos > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2em;
     color: white;
     text-decoration: none;
     background-color: purple;
     padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
 }
-#containerSignos > .signos > .corpo > a:hover {
+#containerSignos > .signos > a:hover {
     background-color: rgb(78, 0, 78);
 }
