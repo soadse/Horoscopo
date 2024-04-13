@@ -335,14 +335,14 @@ function pega(){
         aries.style.display = 'block'
         nome1.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data1.innerHTML = `${dia}/${mes}`
-    } else if(dia <= 19 && mes == 4){
+    } else if(dia <= 20 && mes == 4){
         aries.style.display = 'block'
         nome1.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data1.innerHTML = `${dia}/${mes}`
     }
 
     // SIGNO DE TOURO
-    if(dia >= 20 && mes == 4){
+    if(dia >= 21 && mes == 4){
         touro.style.display = 'block'
         nome2.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data2.innerHTML = `${dia}/${mes}`
@@ -357,14 +357,14 @@ function pega(){
         gemeos.style.display = 'block'
         nome3.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data3.innerHTML = `${dia}/${mes}`
-    } else if(dia <= 21 && mes == 6){
+    } else if(dia <= 20 && mes == 6){
         gemeos.style.display = 'block'
         nome3.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data3.innerHTML = `${dia}/${mes}`
     }
 
     // SIGNO DE CÂNCER  
-    if(dia >= 22 && mes == 6){
+    if(dia >= 21 && mes == 6){
         cancer.style.display = 'block'
         nome4.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data4.innerHTML = `${dia}/${mes}`
@@ -434,14 +434,14 @@ function pega(){
         capricornio.style.display = 'block'
         nome10.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data10.innerHTML = `${dia}/${mes}`
-    } else if(dia <= 19 && mes == 1){
+    } else if(dia <= 20 && mes == 1){
         capricornio.style.display = 'block'
         nome10.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data10.innerHTML = `${dia}/${mes}`
     }
 
     // SIGNO DE AQUÁRIO
-    if(dia >= 20 && mes == 1){
+    if(dia >= 21 && mes == 1){
         aquario.style.display = 'block'
         nome11.innerHTML = `Bem Vindo<br>${nome}`.toLocaleUpperCase()
         data11.innerHTML = `${dia}/${mes}`
