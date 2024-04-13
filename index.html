@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horóscopo</title>
+    <link rel="stylesheet" href="estilo/login.css">
+    <link rel="stylesheet" href="estilo/espera.css">
+    <link rel="stylesheet" href="estilo/principal.css">
+    <style> 
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="containerLogin" style="display: flex;">  
+        <h1>HORÓSCOPO</h1>
+        <div id="conterLogin">
+            <div id="containerLogin1">
+                <label for="nome">Nome:</label>
+                <label for="dia" >Dia:</label>
+                <label for="mes">Mês:</label>
+            </div>
+            <div id="containerLogin2">
+                <input type="text" name="nome" id="nome">
+                <input type="number" name="dia" id="dia">
+                <input type="number" name="mes" id="mes">
+            </div>
+        </div>
+        <div id="btn">
+            <input type="button" value="Calcular" onclick="pega()">
+        </div>
+        <div id="erro"></div>
+        </div>
+    </div>
+
+    <div id="containerEspera" style="display: none;">
+        <div id="balls">
+            <p id="ball1">.</p>
+            <p id="ball2">.</p>
+            <p id="ball3">.</p>
+        </div>
+    </div>
+
+    <div id="containerSignos" style="display: none;">
+
+        <div id="aries" class="signos" style="display: none;">
+            <div class="cabeca">
+                <div class="apresentacao">
+                    <div class="nome" id="nome1"></div>
+                    <div class="data" id="data1"></div>
+                </div>
+            </div>
+            <div class="corpo">
+                <div class="resultado">Áries</div>
+                <div class="imagem"><img src="imagens/signos/aries.gif" alt=""></div>
+                <div class="texto">
+                    <div class="sobre">
+                        <div class="sobre1">
+                            <div>
+                                <strong>Elemento</strong>
+                                <p onclick="mostra1()" value="1">Fogo</p>
+                            </div>
+                            <div>
+                                <strong>Ritmo</strong>
+                                <p onclick="mostra2()" value="2">Cardinal</p>
+                            </div>
+                            <div>
+                                <strong>Regente</strong>
+                                <p onclick="mostra3()" value="3">Marte</p>
+                            </div>     
+                        </div>
+                        <div class="show">
+                            <p class="elemento" id="aries1" style="display: none;">Os signos do elemento Fogo veem o mundo de forma entusiasta. Tendem a desenvolver uma forte criatividade e se guiar pelo seu poder de ação.</p>
+
+                            <p class="ritmo" id="aries2" style="display: none;">Os signos que são de ritmo cardinal se caracterizam pela força de liderança para iniciar projetos e novos ciclos. Áries simboliza a energia vital do fogo.</p>
+
+                            <p class="regente" id="aries3" style="display: none;">Marte se relaciona com nossa força realizadora. Como regente de Áries, destaca o impulso imediatista, a coragem para agir e tomar decisões</p>
+                        </div>
+                    </div>
+                    <h1>CARACTERÍSTICAS DO SIGNO DE ÁRIES</h1>
+                    <h2>Quem tem sol em Áries costuma viver no agora; além de possuir um grande prazer em existir, ação e decisão também podem ser algumas de suas marcas. A liderança é uma característica forte no signo, que pode ser usada para o empreendedorismo.</h2>
+
+                    <h3>Quem tem Sol no signo de Áries pode se identificar com características como a impulsividade e a coragem. Sabe aquela galera que não tem medo de nada? Provavelmente tem Áries forte no Mapa. Eles também amam motivar quem está ao seu redor e são guerreiros por natureza (típica característica de Áries, não?)</h3>
+
+                    <p>Dinâmicos e sinceros, quem tem sol em Áries costuma ter um forte contato com a sua individualidade, que pode parecer egoísmo em alguns momentos. Arianas e arianos tendem a ser alegres e muito extrovertidos, mas também podem ser bastante competitivos e soar um pouco autoritários. Podem preferir trabalhar sozinhos, mas costumam ter um ótimo espírito de liderança.</p>
+
+                    <p>Quem tem o signo de Áries em posição marcante no Mapa Astral de nascimento, geralmente, não se cansa com facilidade; sua disposição e resistência físicas podem ser invejadas por todos os outros signos. Áries é direto para alcançar suas metas e, em casos de pouca maturidade, arianas e arianos podem gostar de criar rivalidades e ser um tanto quanto mandões. Marte como regente reforça o perfil guerreiro do signo e também sinaliza possíveis explosões emocionais.</p>
+                </div>
+            </div>
+        </div> 
+        
+        
+        <div id="touro" class="signos" style="display: none;">
+            <div class="cabeca">
+                <div class="apresentacao">
+                    <div class="nome" id="nome2"></div>
+                    <div class="data" id="data2"></div>
+                </div>
+            </div>
+            <div class="corpo">
+                <div class="resultado">Touro</div>
+                <div class="imagem"><img src="imagens/signos/touro.gif" alt=""></div>
+
+                <div class="texto">
+                    <div class="sobre">
+                        <div class="sobre1">
+                            <div>
+                                <strong>Elemento</strong>
+                                <p onclick="mostra4()" value="1">Terra</p>
+                            </div>
+                            <div>
+                                <strong>Ritmo</strong>
+                                <p onclick="mostra5()" value="2">Fixo</p>
+                            </div>
+                            <div>
+                                <strong>Regente</strong>
+                                <p onclick="mostra6()" value="3">Vênus</p>
+                            </div>     
+                        </div>
+                        <div class="show">
+                            <p class="elemento" id="touro1" style="display: none;">Os signos do elemento Terra vêem o mundo de forma objetiva. Tendem a ser mais estáveis, inspiram confiança e lidam com as mudanças de forma mais lenta</p>
+
+                            <p class="ritmo" id="touro2" style="display: none;">Os signos que são de ritmo fixo se caracterizam por concentrar as características do elemento de forma mais potencializada. Touro simboliza a firmeza da terra.</p>
+
+                            <p class="regente" id="touro3" style="display: none;">Esse planeta simboliza como você ama e também como você enxerga o que é belo. Como regente do signo Touro, Vênus destaca o amor como fonte de segurança.</p>
+                        </div>
+                    </div>
+                    <h1>CARACTERÍSTICAS DO SIGNO DE TOURO</h1>
+                    <h2>Quem tem sol em Touro costuma não abrir mão do que traz conforto e bem-estar, mas pode ter a possessividade em evidência. O signo preza pela beleza física e pela gula. A satisfação de Touro vem do contato com todos os cinco sentidos.</h2>
+
+                    <h3>Quem nasce com o sol no signo Touro pode se identificar com virtudes como a paciência, o bom gosto e a sensualidade. Afeto e valorização do prazer e conforto também podem ser características de Touro, mas sabe aquela galera meio teimosa? Pode ser que tenham o signo de Touro forte no Mapa também...</h3>
+                    
+                    <p>Calmo e persistente, se você tem sol no signo de Touro, provavelmente não costuma se irritar com facilidade. Em geral, suas posses e bens materiais são importantes para você. E, dependendo do restante do seu Mapa Astral, você pode usar isso ao seu favor, desenvolvendo uma tendência natural para acumular bens materiais, além de um ótimo senso de organização financeira. Mas atenção! Essa mesma característica pode despertar possessividade e materialismos excessivos.</p>
+
+                    <p>A combinação do elemento terra com a natureza fixa do signo de Touro indica possíveis dificuldades com mudanças. Taurinos, taurinas, quem tem ascendente, lua ou um acúmulo de planetas no signo Touro pode demonstrar certa lentidão para agir. Isso faz parte do senso de segurança da personalidade de touro, que costuma ser estratégico em cada passo. A terra fixa também pode indicar uma teimosia excessiva, difícil de controlar.</p>
+
+                    <p>O planeta Vênus como regente relaciona o signo ao amor cuidadoso e afetuoso. Taurinos e taurinas amam de forma prática e gentil, e é na convivência que isso se expressa da melhor maneira.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="gemeos" class="signos" style="display: none;">
+            <div class="cabeca">
+                <div class="apresentacao">
+                    <div class="nome" id="nome3"></div>
+                    <div class="data" id="data3"></div>
+                </div>
+            </div>
+            <div class="corpo">
+                <div class="resultado">Gêmeos</div>
+                <div class="imagem"><img src="imagens/signos/gemeos.gif" alt=""></div>
+
+                <div class="texto">
+                    <div class="sobre">
+                        <div class="sobre1">
+                            <div>
+                                <strong>Elemento</strong>
+                                <p onclick="mostra7()" value="1">Ar</p>
+                            </div>
+                            <div>
+                                <strong>Ritmo</strong>
+                                <p onclick="mostra8()" value="2">Mutável</p>
+                            </div>
+                            <div>
+                                <strong>Regente</strong>
+                                <p onclick="mostra8()" value="3">Mercúrio</p>
+                            </div>
+                        </div>
+                        <div class="show">
+                            <p class="elemento" id="gemeos1" style="display: none;">Os signos do elemento Ar veem o mundo de forma racional. Tendem a ser bem inteligentes, desenvolvem múltiplos interesses, mas também podem ser dispersos.</p>
+
+                            <p class="ritmo" id="gemeos2" style="display: none;">Os signos que são de ritmo mutável se caracterizam pelo poder de transformação e de fechamento de ciclos. Gêmeos simboliza a efervescência de ideias.</p>
+
+                            <p class="regente" id="gemeos3" style="display: none;">Planeta da razão, está relacionado a tudo o que envolve o raciocínio e a inteligência humana. Em gêmeos destaca a comunicação, a criatividade e a inventividade.</p>
+                        </div>
+                    </div>
+                    <h1>CARACTERÍSTICAS DO SIGNO DE GÊMEOS</h1>
+                    <h2>Quem tem sol em Gêmeos costuma apreciar novas ideias, novos lugares e novas pessoas. Gêmeos tem carisma de sobra e tende a fazer amigos com muita facilidade. A superficialidade e a inconsequência também podem ser algumas das marcas do signo.</h2>
+
+                    <h3>Quem nasce com o sol no signo de Gêmeos geralmente se identifica com características como a curiosidade, a inteligência e o desejo de liberdade. Sabe aquela galera que ama ler, aprender coisas novas, puxar conversa e fazer novas amizades? Provavelmente tem gêmeos signo forte no mapa.</h3>
+                    
+                    <p>Curioso e bem humorado, quem tem sol no signo de Gêmeos costuma fazer amigos sem grandes dificuldades, tem uma verdadeira vocação para manter um círculo social diverso, com todas as tribos possíveis. Dois em um? Geminianos e geminianas podem ter uma personalidade versátil, que se adapta a diversas formas de pensamento e podem transitar tranquilamente por dois lados de uma questão. Mas atenção! Com imaturidade essa facilidade de mediação pode se transformar em falsidade.</p>
+
+                    <p>A combinação do elemento ar com a natureza mutável do signo indica uma facilidade de adaptação no signo de Gêmeos, além de uma inquietude por novos desafios, aprendizados e experiências. Se você tem este signo forte no Mapa Astral, ou seja, ascendente, lua ou um acúmulo de planetas em Gêmeos signo, provavelmente, odeia uma rotina massante ou exaustiva. O planeta Mercúrio como regente relaciona Gêmeos à criatividade e à comunicação.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="cancer" class="signos" style="display: none;">
+            <div class="cabeca">
+                <div class="apresentacao">
+                    <div class="nome" id="nome4"></div>
+                    <div class="data" id="data4"></div>
+                </div>
+            </div>
+            <div class="corpo">
+                <div class="resultado">Câncer</div>
+                <div class="imagem"><img src="imagens/signos/cancer.gif" alt=""></div>
+                
+                <div class="texto">
+                    <div class="sobre">
+                        <div class="sobre1">
+                            <div>
+                                <strong>Elemento</strong>
+                                <p onclick="mostra10()" value="1">Agua</p>
+                            </div>
+                            <div>
+                                <strong>Ritmo</strong>
+                                <p onclick="mostra11()" value="2">Cardinal</p>
+                            </div>
+                            <div>
+                                <strong>Regente</strong>
+                                <p onclick="mostra12()" value="3">Lua</p>
+                            </div>
+                        </div>
+                        <div class="show">
+                            <p class="elemento" id="cancer1" style="display: none;">Os signos do elemento Água veem o mundo de forma sentimental. Tendem a desenvolver uma forte intuição instintiva e não racional e guiar suas ações pelas emoções</p>
+
+                            <p class="ritmo" id="cancer2" style="display: none;">Os signos que são de ritmo cardinal se caracterizam pela força de liderança para iniciar projetos e novos ciclos. Câncer simboliza o instinto emocional da água</p>
+
+                            <p class="regente" id="cancer3" style="display: none;">A Lua é relacionada às questões emocionais. Como regente de Câncer signo, destaca a sensibilidade e o instinto maternal.</p>
+                        </div>
+                    </div>
+                    <h1>CARACTERÍSTICAS DO SIGNO DE CÂNCER</h1>
+                    <h2>Quem tem sol em Câncer costuma buscar o que lhe traz segurança. O signo é maternal e emotivo e tem uma proximidade com o apego ao passado. Câncer costuma ter a intuição acentuada, sentir as coisas no ar e captar tudo logo no primeiro olhar.</h2>
+
+                    <h3>Quem nasce com o sol no signo de Câncer pode se identificar com características como a sensibilidade e o carinho. Um canceriano ou canceriana típicos costumam ter uma ótima intuição, além de um forte vínculo com seus familiares. A busca constante por segurança também é uma característica do signo de câncer.</h3>
+                    
+                    <p>Emotivos e sensíveis, quem tem sol no signo de Câncer costuma ter uma forte conexão com as lembranças do passado, que podem contribuir para posturas muito sentimentais ou até melancólicas. Cancerianas e cancerianos podem ser muito apegados, mas costumam ter um cuidado ímpar com todas as pessoas que amam. Tendem a buscar segurança e proteção, e isso pode se demonstrar com comportamentos no dia a dia que não oferecem grandes riscos.</p>
+
+                    <p>Quem tem o signo de Câncer forte no Mapa Astral de nascimento se identifica com um forte instinto para ação guiado pelos sentimentos. Câncer consegue traçar estratégias sinuosas para alcançar seus objetivos e, em casos com pouca maturidade, podem usar de manipulação. A Lua como regente reforça o perfil maternal/ paternal do signo e também sinaliza para possíveis oscilações emocionais.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="leao" class="signos" style="display: none;">
+            <div class="cabeca">
+                <div class="apresentacao">
+                    <div class="nome" id="nome5"></div>
+                    <div class="data" id="data5"></div>
+                </div>
+            </div>
+            <div class="corpo">
+                <div class="resultado">Leão</div>
+                <div class="imagem"><img src="imagens/signos/leao.gif" alt=""></div>
+                
+                <div class="texto">
+                    <div class="sobre">
+                        <div class="sobre1">
+                            <div>
+                                <strong>Elemento</strong>
+                                <p onclick="mostra13()" value="1">Fogo</p>
+                            </div>
+                            <div>
+                                <strong>Ritmo</strong>
+                                <p onclick="mostra14()" value="2">Fixo</p>
+                            </div>
+                            <div>
+                                <strong>Regente</strong>
+                                <p onclick="mostra15()" value="3">Sol</p>
+                            </div>
+                        </div>
+                        <div class="show">
+                            <p class="elemento" id="leao1" style="display: none;">Os signos do elemento Fogo veem o mundo de forma entusiasta. Tendem a desenvolver uma forte criatividade e se guiar pelo seu poder de ação.</p>
+
+                            <p class="ritmo" id="leao2" style="display: none;">Os signos que são de ritmo fixo se caracterizam por concentrar as características do elemento de forma mais potencializada. Leão simboliza o brilho natural que irradia do fogo.</p>
+
+                            <p class="regente" id="leao3" style="display: none;">O Sol é o astro mais importante, o centro do sistema. Como regente do signo Leão, destaca a vitalidade, a energia e a facilidade em liderar.</p>
+                        </div>
+                    </div>
+                    <h1>CARACTERÍSTICAS DO SIGNO DE LEÃO</h1>
+                    <h2>Quem tem sol em Leão costuma amar plateias e aplausos. O signo tem a coragem e o humor como marcas registradas, mas também o orgulho e o autoritarismo. Leão geralmente valoriza as oportunidades e aproveita cada momento, sabe amar e ter generosidade.</h2>
+
+                    <h3>Quem nasce com o sol no signo Leão pode se identificar com características como a criatividade e a coragem. Sabe aquela galera com a autoestima lá em cima? Provavelmente tem Leão signo forte no mapa. A generosidade e o otimismo também podem ser bem presentes.</h3>
+                    
+                    <p>Vaidade e bom humor podem ser marca registrada na personalidade de quem tem o sol no signo de Leão. Carismáticos e naturalmente destacáveis, leoninas e leoninos típicos tendem a ser bem extrovertidos. Sua generosidade também se destaca em seu modo de amar, a felicidade da outra pessoa na relação também é motivo de sua própria alegria.</p>
+
+                    <p>A nobreza de caráter é bem presente em quem tem um acúmulo de planetas no signo leão, que são pessoas incapazes de ter comportamentos mesquinhos. O sol como regente de Leão, destaca a tendência natural do signo ser o centro das atenções. Nativos do signo de Leão tem energia de sobra e costuma ser a alma da festa, daqueles que dançam a noite inteira sem maiores esforços. Por outro lado, o Leão signo pode sinalizar certo autoritarismo e prepotência. Leoninas e leoninos precisam tomar cuidado para que o ego ferido não desencadeia comportamentos arrogantes e um tanto quanto explosivos.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="virgem" class="signos" style="display: none;">
+            <div class="cabeca">
+                <div class="apresentacao">
+                    <div class="nome" id="nome6"></div>
+                    <div class="data" id="data6"></div>
+                </div>
+            </div>
+            <div class="corpo">
+                <div class="resultado">Virgem</div>
+                <div class="imagem"><img src="imagens/signos/virgem.gif" alt=""></div>
+                
+                <div class="texto">
+                    <div class="sobre">
+                        <div class="sobre1">
+                            <div>
+                                <strong>Elemento</strong>
+                                <p onclick="mostra16()" value="1">Terra</p>
+                            </div>
+                            <div>
+                                <strong>Ritmo</strong>
+                                <p onclick="mostra17()" value="2">Mutável</p>
+                            </div>
+                            <div>
+                                <strong>Regente</strong>
+                                <p onclick="mostra18()" value="3">Mercúrio</p>
+                            </div>
+                        </div>
+                        <div class="show">
+                            <p class="elemento" id="virgem1" style="display: none;">Os signos do elemento Terra vêem o mundo de forma objetiva. Tendem a ser mais estáveis, inspiram confiança e lidam com as mudanças de forma mais lenta</p>
+
+                            <p class="ritmo" id="virgem2" style="display: none;">Os signos que são de ritmo mutável se caracterizam pelo poder de fechamento de ciclos. Virgem simboliza as ações que buscam o aperfeiçoamento.</p>
+
+                            <p class="regente" id="virgem3" style="display: none;">Planeta da razão, está relacionado a tudo o que envolve o raciocínio e a inteligência humana. No signo Virgem destaca a visão crítica e opinativa do signo.</p>
+                        </div>
+                    </div>
+                    <h1>CARACTERÍSTICAS DO SIGNO DE VIRGEM</h1>
+                    <h2>Quem tem sol em Virgem costuma buscar constantemente a perfeição, tudo sempre poderia estar um pouco melhor. Signo observador, que costuma identificar o detalhe que ninguém mais percebe. Virgem tem praticidade e organização, mas também pode ser frio e cético.</h2>
+
+                    <h3>Quem nasce com o Sol no signo Virgem pode se identificar com características como a objetividade e a organização. Virginianas e virginianos típicos costumam buscar constantemente a perfeição e identificar facilmente detalhes que passam despercebidos por todos os outros, essa é uma das características de Virgem mais admiradas.</h3>
+                    
+                    <p>A busca pela perfeição pode ser bem presente na personalidade de quem tem o sol no signo de Virgem. Naturalmente adeptos da praticidade, virginianas e virginianos podem melhorar sua auto-estima se sentindo mais úteis e produtivos. O nível elevado de autocrítica, porém, pode levá-los a subestimar seus próprios talentos com certa facilidade.</p>
+
+                    <p>Virgem também é o signo mais leal com quem ama de verdade, familiares, amigos e nos relacionamentos amorosos. O amor de Virgem signo é baseado na verdade e na maturidade, quem tem muitos planetas neste signo pode demonstrar seus sentimentos de forma mais prática. Os cuidados com a saúde e com a higiene pessoal podem ser também características fortes que mostram a consciência da importância em se cuidar para viver bem, porém, em casos menos maduros, tendem a se manifestar como mania de limpeza ou de organização.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="libra" class="signos" style="display: none;">
+            <div class="cabeca">
+                <div class="apresentacao">
+                    <div class="nome" id="nome7"></div>
+                    <div class="data" id="data7"></div>
+                </div>
+            </div>
+            <div class="corpo">
+                <div class="resultado">Libra</div>
+                <div class="imagem"><img src="imagens/signos/libra.gif" alt=""></div>
+                
+                <div class="texto">
+                    <div class="sobre">
+                        <div class="sobre1">
+                            <div>
+                                <strong>Elemento</strong>
+                                <p onclick="mostra19()" value="1">Ar</p>
+                            </div>
+                            <div>
+                                <strong>Ritmo</strong>
+                                <p onclick="mostra20()" value="2">Cardinal</p>
+                            </div>
+                            <div>
+                                <strong>Regente</strong>
+                                <p onclick="mostra21()" value="3">Vênus</p>
+                            </div>
+                        </div>
+                        <div class="show">
+                            <p class="elemento" id="libra1" style="display: none;">Os signos do elemento Ar veem o mundo de forma racional. Tendem a ser bem inteligentes, desenvolvem múltiplos interesses, mas também podem ser indecisos.</p>
+
+                            <p class="ritmo" id="libra2" style="display: none;">Os signos que são de ritmo cardinal se caracterizam pela força de liderança para iniciar projetos e novos ciclos. Libra simboliza a sociabilidade e a facilidade de criar relações.</p>
+
+                            <p class="regente" id="libra3" style="display: none;">Esse planeta simboliza como você ama e também como você enxerga o que é belo. Como regente de Libra, Vênus destaca a idealização de um amor perfeito.</p>
+                        </div>
+                    </div>
+                    <h1>CARACTERÍSTICAS DO SIGNO DE LIBRA</h1>
+                    <h2>Quem tem sol em Libra costuma buscar sempre o equilíbrio e conviver com a indecisão. Regido por Vênus, o signo tem uma aproximação natural com as artes. Libra costuma ter ética, mas também pode ter vaidade em excesso e comportamentos considerados de “mau gosto”.</h2>
+
+                    <h3>Quem nasce com o sol no signo Libra, em geral, se identifica com características como a cortesia, a delicadeza e a busca constante pelo equilíbrio. Librianas e librianos típicos adoram viver relacionamentos e tendem a ter um pouco de dificuldade para tomar decisões.</h3>
+                    
+                    <p>A empatia e a diplomacia podem ser bem presentes na personalidade de quem tem o sol no signo Libra. Naturalmente direcionados para as relações com outras pessoas, librianas e librianos podem ter um grande talento para solucionar conflitos, porém, a preocupação em racionalizar os dois lados de uma questão pode gerar situações de dúvida e indecisão.</p>
+
+                    <p>Libra é regido por Vênus, e isso dá ao signo um apreço natural a tudo que pode ser considerado belo. Quem tem um acúmulo de planetas em Libra pode ter uma forte conexão com as artes, ou até ter facilidade para viver uma carreira artística. Em casos com pouca maturidade, essa aproximação com a beleza pode se manifestar como uma vaidade desmedida. O companheirismo pode ser uma característica marcante, como também o senso de justiça e a busca em viver todas as relações com respeito mútuo.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="escorpiao" class="signos" style="display: none;">
+            <div class="cabeca">
+                <div class="apresentacao">
+                    <div class="nome" id="nome8"></div>
+                    <div class="data" id="data8"></div>
+                </div>
+            </div>
+            <div class="corpo">
+                <div class="resultado">Escorpião</div>
+                <div class="imagem"><img src="imagens/signos/escorpiao.gif" alt=""></div>
+                
+                <div class="texto">
+                    <div class="sobre">
+                        <div class="sobre1">
+                            <div>
+                                <strong>Elemento</strong>
+                                <p onclick="mostra22()" value="1">Agua</p>
+                            </div>
+                            <div>
+                                <strong>Ritmo</strong>
+                                <p onclick="mostra23()" value="2">Fixo</p>
+                            </div>
+                            <div>
+                                <strong>Regente</strong>
+                                <p onclick="mostra24()" value="3">Marte e<br>Plutão</p>
+                            </div>
+                        </div>
+                        <div class="show">
+                            <p class="elemento" id="escorpiao1" style="display: none;">Os signos do elemento Água veem o mundo de forma sentimental. Tendem a desenvolver uma forte intuição instintiva,não racional e guiar suas ações pelas emoções.</p>
+
+                            <p class="ritmo" id="escorpiao2" style="display: none;">Os signos que são de ritmo fixo se caracterizam por concentrar as características do elemento de forma mais potencializada. Escorpião simboliza o poder transformador da água.</p>
+
+                            <p class="regente" id="escorpiao3" style="display: none;">Marte se relaciona com nossa força realizadora. Como regente de Escorpião signo, destaca a agressividade estratégica. Plutão é o planeta das transformações e ressignificações, como regente, destaca a relação do signo com a morte e os renascimentos.</p>
+                        </div>
+                    </div>
+                    <h1>CARACTERÍSTICAS DO SIGNO DE ESCORPIÃO</h1>
+                    <h2>Quem tem sol em Escorpião costuma ter muita perspicácia, não é a toa que são naturalmente detetives. O sexto sentido do signo alerta para possíveis “perigos” logo de cara. Escorpião tem uma capacidade de regeneração única, mas também pode ter muitos ciúmes.</h2>
+
+                    <h3>Quem nasce com o sol no signo Escorpião pode se identificar com características como a intensidade e o poder de transformação. Escorpianas e escorpianos típicos costumam ser bastante passionais e muito generosos. O espírito de detetive e o sexto sentido afiado também são bem marcantes em quem tem escorpião forte no mapa também.</h3>
+                    
+                    <p>Uma forte intuição é uma das marcas registradas de quem tem Sol no signo Escorpião, geralmente orientados pelas suas emoções, escorpianos e escorpianas conseguem enxergar nas entrelinhas e identificar o que não foi dito. Bastante conectados com seus sentimentos, podem desenvolver comportamentos possessivos e obsessivos.</p>
+
+                    <p>A força e capacidade de se reinventar, mesmo diante de situações muito desafiadoras, são características de quem tem o signo de Escorpião em posição marcante no Mapa Astral, como também o autocontrole e a internalização das emoções. Marca registrada do signo, a intensidade escorpiana nasce principalmente da consciência da finitude das coisas, o que se manifesta também em uma imensa generosidade com as pessoas que ama.</p>
+
+                    <p>A memória de escorpião é muito boa, quem tem o signo forte no Mapa Astral não costuma esquecer o que lhe fazem, de bom ou de mal, e deixam bem claras suas lembranças.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="sagitario" class="signos" style="display: none;">
+            <div class="cabeca">
+                <div class="apresentacao">
+                    <div class="nome" id="nome9"></div>
+                    <div class="data" id="data9"></div>
+                </div>
+            </div>
+            <div class="corpo">
+                <div class="resultado">Sagitário</div>
+                <div class="imagem"><img src="imagens/signos/sagitario.gif" alt=""></div>
+                
+                <div class="texto">
+                    <div class="sobre">
+                        <div class="sobre1">
+                            <div>
+                                <strong>Elemento</strong>
+                                <p onclick="mostra25()" value="1">Fogo</p>
+                            </div>
+                            <div>
+                                <strong>Ritmo</strong>
+                                <p onclick="mostra26()" value="2">Mutável</p>
+                            </div>
+                            <div>
+                                <strong>Regente</strong>
+                                <p onclick="mostra27()" value="3">Júpiter</p>
+                            </div>
+                        </div>
+                        <div class="show">
+                            <p class="elemento" id="sagitario1" style="display: none;">Os signos do elemento Fogo veem o mundo de forma entusiasta. Tendem a desenvolver uma forte criatividade e se guiar pelo seu poder de ação.</p>
+
+                            <p class="ritmo" id="sagitario2" style="display: none;">Os signos que são de ritmo mutável se caracterizam pelo poder de transformação e de fechamento de ciclos.</p>
+
+                            <p class="regente" id="sagitario3" style="display: none;">Planeta da expansão, está relacionado ao que traz crescimento, felicidade e confiança. No signo de Sagitário destaca a busca pelos excessos e expansividade: mais é sempre melhor.</p>
+                        </div>
+                    </div>
+                    <h1>CARACTERÍSTICAS DO SIGNO DE SAGITÁRIO</h1>
+                    <h2>Quem tem sol em Sagitário costuma ser viajante, sua casa é o mundo inteiro. O signo viaja muito também em sua própria mente. Não tente aprisionar Sagitário de nenhuma forma, ele não aceita limites. Otimista e jovial, pode ter exageros e uma dose de deboche.</h2>
+
+                    <h3>Quem nasce com o sol no signo de Sagitário pode se identificar com características como o otimismo e o desejo de liberdade. Sagitarianas e sagitarianos típicos costumam ser viajantes e, geralmente, enxergam o mundo inteiro como sua casa. A jovialidade também é uma característica marcante de Sagitário.</h3>
+                    
+                    <p>Vaidosos e bem humorados, quem tem sol no signo de Sagitário costuma enxergar com facilidade o lado positivo de cada situação. Cidadãos do mundo, sagitarianas e sagitarianos geralmente são pessoas extrovertidas, espontâneas e comunicativas que não gostam nenhum pouco de solidão. O idealismo sempre presente, também faz do signo de Sagitário o incentivador ideal, capaz de contagiar qualquer equipe sem muitos esforços.</p>
+
+                    <p>Tentar prender uma pessoa com um acúmulo de planetas no signo de Sagitário não é uma boa ideia. De alma livre e coração aventureiro, viajar, pelo mundo ou pela mente alimenta as personalidades sagitarianas, que sempre buscam por experiências que trazem mais conhecimento. Porém, é preciso ter cuidado com os comportamentos vaidosos, sagitarianos e sagitarianas podem se considerar autoridades em assuntos que não dominam e passar uma imagem de “donos da verdade”.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="capricornio" class="signos" style="display: none;">
+            <div class="cabeca">
+                <div class="apresentacao">
+                    <div class="nome" id="nome10"></div>
+                    <div class="data" id="data10"></div>
+                </div>
+            </div>
+            <div class="corpo">
+                <div class="resultado">Capricórnio</div>
+                <div class="imagem"><img src="imagens/signos/capricornio.gif" alt=""></div>
+                
+                <div class="texto">
+                    <div class="sobre">
+                        <div class="sobre1">
+                            <div>
+                                <strong>Elemento</strong>
+                                <p onclick="mostra28()" value="1">Terra</p>
+                            </div>
+                            <div>
+                                <strong>Ritmo</strong>
+                                <p onclick="mostra29()" value="2">Cardinal</p>
+                            </div>
+                            <div>
+                                <strong>Regente</strong>
+                                <p onclick="mostra30()" value="3">Saturno</p>
+                            </div>
+                        </div>
+                        <div class="show">
+                            <p class="elemento" id="capricornio1" style="display: none;">Os signos do elemento Terra vêem o mundo de forma objetiva. Tendem a ser mais estáveis, inspiram confiança e lidam com as mudanças de forma mais lenta.</p>
+
+                            <p class="ritmo" id="capricornio2" style="display: none;">Os signos que são de ritmo cardinal se caracterizam pela força de liderança para iniciar projetos e novos ciclos. Capricórnio simboliza o poder de realização da terra.</p>
+
+                            <p class="regente" id="capricornio3" style="display: none;">Senhor do tempo, Saturno é o planeta que fala sobre maturidade e responsabilidade. Como regente, destaca a consciência natural do signo de Capricórnio de que tudo tem seu tempo.</p>
+                        </div>
+                    </div>
+                    <h1>CARACTERÍSTICAS DO SIGNO DE CAPRICÓRNIO</h1>
+                    <h2>Quem tem sol em Capricórnio costuma ter seus propósitos e metas bem definidos. Signo de praticidade que segue as regras do jogo tem total noção dos seus limites. Capricórnio é maduro e bem humorado, mas também pode ser frio nas relações e um tanto pessimista.</h2>
+
+                    <h3>Quem tem Sol em Capricórnio pode se identificar com virtudes como persistência e responsabilidade. Capricórnio signo costuma ter metas bem definidas e noção dos seus limites. A relação próxima com o trabalho também pode ser uma característica de capricórnio bem marcante.</h3>
+                    
+                    <p>Praticidade e maturidade são típicas características de Capricórnio. Independentes, costumam fazer seu próprio caminho e não confiar muito em rotas traçadas por outras pessoas. Quem tem um acúmulo de planetas em Capricórnio signo pode ter um perfil workaholic, mas a carreira profissional é apenas um dos aspectos que chamam a atenção dos capricornianos.</p>
+
+                    <p>A paciência tende a ser bem comum para os nativos desse signo que, desde muito cedo, aprendem que tudo na vida demanda tempo e dedicação. O sucesso é fruto de persistência, aprendizado e disciplina. Consciência de que regras existem e devem ser cumpridas também é típico do signo de Capricórnio. Mas atenção! O excesso de foco material pode contribuir para o desenvolvimento de posturas avarentas ou excessivamente ambiciosas. Uma dose extra de pessimismo também pode existir.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="aquario" class="signos" style="display: none;">
+            <div class="cabeca">
+                <div class="apresentacao">
+                    <div class="nome" id="nome11"></div>
+                    <div class="data" id="data11"></div>
+                </div>
+            </div>
+            <div class="corpo">
+                <div class="resultado">Aquário</div>
+                <div class="imagem"><img src="imagens/signos/aquario.gif" alt=""></div>
+                
+                <div class="texto">
+                    <div class="sobre">
+                        <div class="sobre1">
+                            <div>
+                                <strong>Elemento</strong>
+                                <p onclick="mostra31()" value="1">Ar</p>
+                            </div>
+                            <div>
+                                <strong>Ritmo</strong>
+                                <p onclick="mostra32()" value="2">Fixo</p>
+                            </div>
+                            <div>
+                                <strong>Regente</strong>
+                                <p onclick="mostra33()" value="3">Saturno e<br>Urano</p>
+                            </div>
+                        </div>
+                        <div class="show">
+                            <p class="elemento" id="aquario1" style="display: none;">Os signos do elemento Ar veem o mundo de forma racional. Tendem a ser bem inteligentes, desenvolvem múltiplos interesses, mas também podem ser indecisos.</p>
+
+                            <p class="ritmo" id="aquario2" style="display: none;">Os signos que são de ritmo fixo se caracterizam por concentrar as características do elemento de forma mais potencializada. Aquário representa o apreço pelo aprendizado alcançado ao longo da história.</p>
+
+                            <p class="regente" id="aquario3" style="display: none;">Senhor do tempo, Saturno é o planeta que fala sobre maturidade e responsabilidade, como regente de aquário signo, destaca a importância de fechar ciclos para que outros possam ser iniciados. Urano fala sobre mudanças e rebeldia, como regente destaca o apreço pela renovação.</p>
+                        </div>
+                    </div>
+                    <h1>CARACTERÍSTICAS DO SIGNO DE AQUÁRIO</h1>
+                    <h2>Quem tem sol em Aquário costuma ter a amizade como cartão de visita e ter uma conexão intensa com a liberdade. Signo idealista, tende a dar preferência aos diálogos racionais. Aquário é solidário e humano, também pode ser radical e bem “do contra”.</h2>
+
+                    <h3>Um aquariano ou uma aquariana pode se identificar com características como o desejo de inovar e a independência. Sabe aquela galera diferentona? São eles. Aquário signo costuma ser bastante idealista e seus nativos prezam por experiências que trazem liberdade. Podem ter posturas consideradas radicais e é bem comum o aquariano ser o "do contra" da turma.</h3>
+                    
+                    <p>A busca por inovação e independência podem ser características fortes em pessoas com o sol no signo de Aquário. Com criatividade sempre em alta, costumam ser bastante inventivas e direcionadas a solução de problemas. Quem tem um acúmulo de planetas no signo de Aquário pode ter um perfil questionador e radical, e em algumas situações pode discordar da maioria pelo simples fato de querer ser sempre diferente.</p>
+
+                    <p>As relações de amizade tendem a ser bem importantes para aquariano e para aquariana, esse sentimento nasce, principalmente, pelo forte senso de coletividade presente em Aquário signo. Consciência de que a felicidade de um só é possível com a felicidade de todos é bem característico nesse signo. Em casos com pouca maturidade, essa relação aquariana com a coletividade pode se manifestar em posturas extremistas ou em personalidades rebeldes sem causa.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="peixes" class="signos" style="display: none;">
+            <div class="cabeca">
+                <div class="apresentacao">
+                    <div class="nome" id="nome12"></div>
+                    <div class="data" id="data12"></div>
+                </div>
+            </div>
+            <div class="corpo">
+                <div class="resultado">Peixes</div>
+                <div class="imagem"><img src="imagens/signos/peixes.gif" alt=""></div>
+                
+                <div class="texto">
+                    <div class="sobre">
+                        <div class="sobre1">
+                            <div>
+                                <strong>Elemento</strong>
+                                <p onclick="mostra34()" value="1">Agua</p>
+                            </div>
+                            <div>
+                                <strong>Ritmo</strong>
+                                <p onclick="mostra35()" value="2">Mutável</p>
+                            </div>
+                            <div>
+                                <strong>Regente</strong>
+                                <p onclick="mostra36()" value="3">Júpiter e<br>Netuno</p>
+                            </div>
+                        </div>
+                        <div class="show">
+                            <p class="elemento" id="peixes1" style="display: none;">Os signos do elemento Água veem o mundo de forma sentimental. Tendem a desenvolver uma forte intuição instintiva e não racional e guiar suas ações pelas emoções.</p>
+
+                            <p class="ritmo" id="peixes2" style="display: none;">Os signos que são de ritmo mutável se caracterizam pelo poder de transformação e de fechamento de ciclos. Peixes representa a possível flexibilidade da água</p>
+
+                            <p class="regente" id="peixes3" style="display: none;">Júpiter está relacionado ao que traz crescimento, felicidade e confiança, no signo de Peixes destaca o olhar para uma espiritualidade mais ampla. Netuno, planeta dos sonhos, destaca em Peixes o grande potencial de fantasia e imaginação.</p>
+                        </div>
+                    </div>
+                    <h1>CARACTERÍSTICAS DO SIGNO DE PEIXES</h1>
+                    <h2>Quem tem sol em Peixes costuma entender tudo sem precisar de muitas palavras, possuem uma sensibilidade superior. Signo compassivo e inspirador, Peixes tende a ter uma forte conexão com a espiritualidade, mas pode se iludir com certa facilidade.</h2>
+
+                    <h3>Quem nasce com o sol no signo de Peixes pode se identificar com virtudes como a sensibilidade e a intuição. Piscianos e piscianas típicos costumam ser bastante solidários e muitas vezes têm uma forte conexão com a espiritualidade. Por serem bastante sonhadores, se iludir com certa facilidade também é uma característica de Peixes.</h3>
+                    
+                    <p>A empatia e a humildade podem ser fortes características de Peixes. Sempre conectados com sua intuição, piscianos e piscianas costumam captar as coisas no ar, muitas vezes são pessoas bem discretas e observadoras que conseguem perceber o mundo através da observação de si. Quem tem um acúmulo de planetas no signo de Peixes tende a dar muita importância aos seus sonhos e ao que ainda não é real, mas pode ser.</p>
+
+                    <p>Costumam ser pessoas compreensivas e compassivas. Por guardar em si emoções que em vários momentos são opostas, conseguem enxergar os desafios do outro com bastante facilidade. As relações afetivas são bem importantes para esses nativos, mas o romantismo excessivo do signo de Peixes também pode sinalizar uma inclinação para amores platônicos e facilidade para viver desilusões amorosas.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="script/script.js"></script>
+   
+</body>
+</html>

@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+#containerEspera {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    animation: some forwards 3s;
+}
+@keyframes some {
+    0% {
+        display: block;
+    }
+    100% {
+        display: none;
+    }
+}
+#containerEspera > #balls {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#containerEspera > #balls > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    margin-right: 10px;
+}
+#containerEspera > #balls > #ball1 {
+    animation: cor1 infinite 1s;
+}
+#containerEspera > #balls > #ball2 {
+    animation: cor2 infinite 1s;
+}
+#containerEspera > #balls > #ball3 {
+    animation: cor3 infinite 1s;
+}
+@keyframes cor1 {
+    0% {
+        color: purple;
+    }
+    20% {
+        color:  black;
+    }
+    100% {
+        color: purple;
+    }
+}
+@keyframes cor2 {
+    0% {
+        color: purple;
+    }
+    50% {
+        color:  black;
+    }
+    100% {
+        color: purple;
+    }
+}@keyframes cor3 {
+    0% {
+        color: purple;
+    }
+    80% {
+        color:  black;
+    }
+    100% {
+        color: purple;
+    }
+}
+
+
+
