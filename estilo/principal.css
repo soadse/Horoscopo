@@ -94,7 +94,7 @@
     text-indent: 2em;
     line-height: 30px;
     text-align: justify;
-    padding-bottom: 30px;
+    padding-top: 30px;
     font-size: 25px;
 }
 #containerSignos > .signos > .corpo > .texto > .sobre {
@@ -131,18 +131,15 @@
     font-size: 20px;
     line-height: 30px;
     text-align: justify;
-    margin-bottom: 30px;
 }
 #containerSignos > .signos > .corpo > a {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 2em;
     color: white;
     text-decoration: none;
     background-color: purple;
     padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
 #containerSignos > .signos > .corpo > a:hover {
     background-color: rgb(78, 0, 78);
