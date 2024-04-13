@@ -132,16 +132,3 @@
     line-height: 30px;
     text-align: justify;
 }
-#containerSignos > .signos > a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    color: white;
-    text-decoration: none;
-    background-color: purple;
-    padding: 10px;
-}
-#containerSignos > .signos > a:hover {
-    background-color: rgb(78, 0, 78);
-}

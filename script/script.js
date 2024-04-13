@@ -47,19 +47,6 @@ var sagitario = document.querySelector('#sagitario')
 var capricornio = document.querySelector('#capricornio')
 var aquario = document.querySelector('#aquario')
 var peixes = document.querySelector('#peixes')
-aries.style.display = 'none'
-touro.style.display = 'none'
-gemeos.style.display = 'none'
-cancer.style.display = 'none'
-leao.style.display = 'none'
-virgem.style.display = 'none'
-libra.style.display = 'none'
-escorpiao.style.display = 'none'
-sagitario.style.display = 'none'
-capricornio.style.display = 'none'
-aquario.style.display = 'none'
-peixes.style.display = 'none'
-
 
 
 //  CAMPO DOS ELEMENTOS
