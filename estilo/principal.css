@@ -1,22 +1,17 @@
 @charset "UTF-8";
 
+body {
+    scrollbar-width: none;
+    background-attachment: fixed;
+}
+
 #containerSignos {
-    width: 100vw;
-    height: 100vh;
-    animation: trans forwards .5s;
+    width: 100%;
+    height: 100%;
 }
-@keyframes trans {
-    0% {
-        transform: matrix(10, 0, 0, 10, 0, 0);
-        opacity: 0%; 
-    }
-    100% {
-        opacity: 100%;
-    }
-}
-#containerSignos > .signos {
-    width: 100vw;
-    height: 100%vh;
+#containerSignos > .signos{
+    width: 100%;
+    height: 100%;
 }
 
 /* Campo da cabeça na tela principla */
