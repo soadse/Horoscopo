@@ -14,6 +14,10 @@
         opacity: 100%;
     }
 }
+#containerSignos > .signos {
+    width: 100%;
+    height: 100%;
+}
 
 /* Campo da cabeça na tela principla */
 #containerSignos > .signos > .cabeca {
