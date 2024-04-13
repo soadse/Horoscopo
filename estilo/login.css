@@ -8,7 +8,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: yellow;
+    background-color: pink;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -21,7 +21,6 @@
     }
     100% {
         opacity: 100%;
-        
     }
 }
 #containerLogin > h1 {
