@@ -153,6 +153,9 @@
     text-align: center;
     font-family: var(--font02);
 }
+#containerSignos > .signos > .corpo > .texto > .sobre > .sobre1 > div > strong {
+    font-size: 25px;
+}
 #containerSignos > .signos > .corpo > .texto > .sobre > .sobre1 > div > p {
     margin-top: 10px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
