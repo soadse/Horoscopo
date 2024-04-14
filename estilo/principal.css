@@ -1,14 +1,25 @@
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 .courgette-regular {
     font-family: "Courgette", cursive;
     font-weight: 400;
     font-style: normal;
 }
+.architects-daughter-regular {
+    font-family: "Architects Daughter", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+  
+
+  
 
 :root {
     --font01: "Courgette", cursive;
+    --font02: "Architects Daughter", cursive;
 }
 
 
@@ -95,16 +106,16 @@
     margin-bottom: 20px;
 }
 #containerSignos > .signos > .corpo > .texto > h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: justify;
-    text-indent: 2em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    word-break: keep-all;
+    text-align: center;
     font-weight: normal;
-    font-size: 25px;
     margin-bottom: 20px;
 }
 #containerSignos > .signos > .corpo > .texto > h3 {
-    text-indent: 2em;
-    text-align: justify;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    word-break: keep-all;
+    text-align: center;
     font-weight: normal;
     font-size: 25px;
     line-height: 30px;
@@ -114,11 +125,12 @@
     margin-bottom: 30px;
 }
 #containerSignos > .signos > .corpo > .texto > p {
-    text-indent: 2em;
+    text-align: center;
     line-height: 30px;
-    text-align: justify;
     padding-top: 30px;
     font-size: 25px;
+    font-weight: normal;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 #containerSignos > .signos > .corpo > .texto > .sobre {
     display: flex;
@@ -133,9 +145,12 @@
     margin-bottom: 10px;
     font-size: 25px;
     text-align: center;
+    font-family: var(--font02);
+    font-size: 30px;
 }
 #containerSignos > .signos > .corpo > .texto > .sobre > .sobre1 > div > p {
     margin-top: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     animation: cor infinite 1s;
 }
 @keyframes cor {
@@ -151,12 +166,12 @@
 }
 #containerSignos > .signos > .corpo > .texto > .sobre > .show > p {
     background-color: rgba(128, 0, 128, 0.432);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border-radius: 0px 20px 0px 20px;
     padding: 10px;
-    text-indent: 2em;
     font-size: 20px;
     line-height: 30px;
-    text-align: justify;
+    text-align: center;
 }
 #containerSignos > .signos > .corpo > a {
     font-size: 2em;
