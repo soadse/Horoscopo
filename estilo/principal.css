@@ -25,7 +25,9 @@
 
   
   
-
+body {
+    background-color: rgb(255, 222, 255);
+}
 #containerSignos {
     width: 100vw;
     height: 100vh;
