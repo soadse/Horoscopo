@@ -113,24 +113,30 @@
     text-indent: 1em;
     margin-bottom: 20px;
     font-size: 20px;
-    line-height: 2em;
+    line-height: 35px;
 }
 #containerSignos > .signos > .corpo > .texto > h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: normal;
-    font-size: 20px;
-    line-height: 2em;
+    text-align: justify;
+    word-spacing: 0px;
+    text-indent: 1em;
+    font-size: 15px;
+    line-height: 35px;
     background-color: rgba(128, 0, 128, 0.267);
     padding: 10px;
     margin-top: 30px;
     margin-bottom: 30px;
 }
 #containerSignos > .signos > .corpo > .texto > p {
-    text-align: center;
-    line-height: 30px;
-    padding-top: 30px;
-    font-size: 25px;
-    font-weight: normal;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: normal;
+    text-align: justify;
+    word-spacing: 0px;
+    text-indent: 1em;
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 35px;
 }
 #containerSignos > .signos > .corpo > .texto > .sobre {
     display: flex;
@@ -168,7 +174,7 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border-radius: 0px 20px 0px 20px;
     padding: 10px;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 30px;
     text-align: center;
 }
